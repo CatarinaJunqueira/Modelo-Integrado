@@ -125,6 +125,7 @@ model = restricao_N4(model,P,R,C,mapObj_w,nvar); %restricao 22
 model.solve();
 
 % Display solution
+num_variaveis=length(model.Solution.x)
 fprintf ('\nSolution status = %s\n',model.Solution.statusstring);
 fprintf ('Valor da Funcao Objetivo: %f\n', model.Solution.objval);
 %fprintf ('Numero de remanejamentos: %f\n', sum(model.Solution.x(1:nx)));
